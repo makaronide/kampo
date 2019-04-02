@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    / script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript"
+    / script async="" src="https://www.googletagmanager.com/gtag/js?id=*****"
+    // javascript:
+    //   | window.dataLayer = window.dataLayer || [];
+    //   | function gtag(){dataLayer.push(arguments);}
+    //   | gtag('js', new Date());
+
+    //   | gtag('config', 'UA-********-1');
+    / link data-turbolinks-track="reload" href="//assets.cdn.finc.com/psm/assets/users/application-6b139e72e6ccb8ba329d31f0905e53ff9f84740d9385327a0dfac7ba20ef4dcf.css" media="all" rel="stylesheet" /
+    title App
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    = yield

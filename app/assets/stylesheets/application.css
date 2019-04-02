@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  display: none;
+  border: 0;
+}
+
+.ui-mobile, .ui-page-active {
+	 display: block;
+	 overflow: visible;
+	 overflow-x: hidden;
+}
+
+ #obg_wrapper {
+  width: 940px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#obg_body {
+  border: 1px solid #DBDBDB;
+  margin: 0 0 0 0;
+  min-height: 540px;
+  position: relative;
+  zoom: 100%;
+}
+
+#councel_top {
+  min-height: 540px;
+  text-align: center;
+}
+
+#councel_top h1 {
+  margin: 0 auto 44px auto;
+  padding: 80px 0 12px 0;
+  border-bottom: 1px solid #D1C7AD;
+  width: 400px;
+}
+
+#top_body {
+  margin: 0 10px;
+  padding: 0 260px;
+}
+
+#top_body p {
+  font-family: "FP-HiraMinProN-W6";
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 30px;
+  margin: 0 0 30px 0;
+}
+
+.ui-content {
+  border-width: 0;
+  overflow: visible;
+  overflow-x: hidden;
+  padding: 1em;
+}
+
+#cl_start .ui-btn, .btn_wrap .ui-btn {
+    font-family: "FP-HiraMinProN-W6";
+    font-size: 20px;
+    font-size: 2.0rem;
+    line-height: 20px;
+}
+
+.ui-input-btn input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background: #fff;
+    background: rgba(255,255,255,0);
+    filter: Alpha(Opacity=0);
+    opacity: .1;
+    font-size: 1px;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+@media screen and (orientation: landscape) {
+	.ui-mobile .ui-page {
+	    min-height: 300px;
+	}
+}

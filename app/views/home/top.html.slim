@@ -1,0 +1,25 @@
+body
+  .ui-page.ui-page-theme-a.ui-page-active data-role="page" data-url="/counseling/" style="" tabindex="0"
+    #obg_wrapper
+      #obg_body
+        #councel_top style="background-image: image_url(#{hoge.image})"
+          h1
+            / img alt=("Obagi 肌診断") src="/obg_common/images/title_counceling.png" /
+          #top_body
+            p
+              | 皮膚科学に基づいて、
+              br.br_pc_only>/
+              | 健康で美しい素肌へと導くObagiのスキンケア。
+              br>/
+              | 一人ひとり異なる「肌悩み」に応じた、
+              br.br_pc_only>/
+              | 最適なケアを探しましょう。
+              br>/
+              | あなたにおすすめの商品もご紹介します。
+            form#cl_start.ui-content action="./" method="POST"
+              .ui-btn.ui-input-btn.ui-btn-b.ui-corner-all.ui-shadow.ui-icon-arrow-r.ui-btn-icon-right
+                | 診断を始める
+                input data-icon="arrow-r" data-iconpos="right" data-theme="b" name="cl_start" type="submit" value="診断を始める" /
+              input name="flg" type="hidden" value="1" /
+      footer
+        | © ROHTO Pharmaceutical Co.,Ltd. All rights reserved.
