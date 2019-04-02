@@ -1,0 +1,2 @@
+class Shoyaku < ApplicationRecord
+end

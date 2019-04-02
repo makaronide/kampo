@@ -1,0 +1,2 @@
+class Kampo < ApplicationRecord
+end

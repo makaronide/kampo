@@ -1,0 +1,2 @@
+class KampoShoyaku < ApplicationRecord
+end
