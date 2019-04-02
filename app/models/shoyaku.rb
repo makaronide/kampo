@@ -11,4 +11,6 @@
 #
 
 class Shoyaku < ApplicationRecord
+  has_many :kampo_shoyaku_relations
+  has_many :kampo, through: :kampo_shoyaku_relations
 end

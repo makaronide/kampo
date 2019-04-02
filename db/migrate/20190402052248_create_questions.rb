@@ -1,7 +1,7 @@
 class CreateQuestions < ActiveRecord::Migration[5.0]
   def change
     create_table :questions do |t|
-      t.integer :condition_id
+      t.references :condition, foreign_key: true
       t.text :content
 
       t.timestamps

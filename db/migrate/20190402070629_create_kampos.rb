@@ -3,7 +3,7 @@ class CreateKampos < ActiveRecord::Migration[5.0]
     create_table :kampos do |t|
       t.string :name
       t.text :description
-      t.integer :condition_id
+      t.references :condition, foreign_key: true
       t.integer :true_number
 
       t.timestamps

@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190402071028) do
+ActiveRecord::Schema.define(version: 20190402095132) do
 
   create_table "conditions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "kampo_shoyaku_relations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "kampo_id"
+    t.integer  "shoyaku_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kampo_id"], name: "index_kampo_shoyaku_relations_on_kampo_id", using: :btree
+    t.index ["shoyaku_id"], name: "index_kampo_shoyaku_relations_on_shoyaku_id", using: :btree
   end
 
   create_table "kampo_shoyakus", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -32,6 +41,13 @@ ActiveRecord::Schema.define(version: 20190402071028) do
     t.integer  "true_number"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "question", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "symptom_id"
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -59,4 +75,6 @@ ActiveRecord::Schema.define(version: 20190402071028) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "kampo_shoyaku_relations", "kampos"
+  add_foreign_key "kampo_shoyaku_relations", "shoyakus"
 end

@@ -9,4 +9,6 @@
 #
 
 class Condition < ApplicationRecord
+  has_many :questions, dependent: :delete_all
+  has_many :kampos, dependent: :delete_all
 end
