@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   root 'home#top'
 
   get 'survey/:condition_id/:question_id' => 'qusestions#content'
-
   get 'register'  => 'users#register'
   post 'register' => 'users#create'
 end
