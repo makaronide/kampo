@@ -1,4 +1,4 @@
-class CoditionsController < ApplicationController
+class ConditionsController < ApplicationController
   def name
     @conditions = Condition.all
     @next_question_id = 1

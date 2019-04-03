@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class CoditionControllerTest < ActionDispatch::IntegrationTest
+class ConditionControllerTest < ActionDispatch::IntegrationTest
   test "should get name" do
-    get codition_name_url
+    get condition_name_url
     assert_response :success
   end
 
