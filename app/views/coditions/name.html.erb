@@ -16,12 +16,14 @@
 							<% end %>
 						</div>
 						<div class="row">
-							<a class="js_survey_content_link" href="/supplements/survey?answer%5Bvalue%5D=2&amp;position=3">
-								<div class="option">少しある</div>
-							</a>
+							<%= link_to  root_path, class: 'js_survey_content_link' do %>
+					  		<div class="option">少しある</div>
+							<% end %>
 						</div>
 						<div class="row">
-							<a class="js_survey_content_link" href="/supplements/survey?answer%5Bvalue%5D=1&amp;position=3"><div class="option">ほとんどない</div></a>
+							<%= link_to  root_path, class: 'js_survey_content_link' do %>
+					  		<div class="option">とてもある</div>
+							<% end %>
 						</div>
 					</div>
 				</div>
