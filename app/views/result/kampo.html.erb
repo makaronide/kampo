@@ -1,2 +1,54 @@
-<h1>Result#kampo</h1>
-<p>Find me in app/views/result/kampo.html.erb</p>
+<div data-role="page" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="">
+	<div id="obg_wrapper">
+		<div id="obg_body" style="background:url(<%= asset_path 'bg01.gif' %>) repeat center top">
+			<div id="result_box">
+				<h1 class="result_title01">－診断結果－</h1>
+					<h2 class="result_comm">
+						<span class="result_sub">あなたに合う漢方は</span>
+						<span class="result_main resutl_color2">○○○○</span>
+					</h2>
+					<div class="result_txt">
+						<p class="">気になる部分へのエイジングケアをおすすめします。<br>年齢肌のケアには、うるおいを補ってハリを引き出すアプローチが大切です。<br>スペシャルな美容成分にこだわって、ふっくらとしたハリ肌を目指しましょう。<span class="text_chu">※年齢に応じた潤いとハリのケア</span></p>
+					</div>
+					<div id="result_otherbox">
+						<h3 class="result_title02">［配合されている生薬］</h3>
+						<div id="result_ohterlist">
+
+							<ul class="survey_result_ul" data-supplement-index="0">
+								<li class="survey_result_li survey_result_slider_content">
+									<div class="supplement_card supplement_card--1 surface--r12-s03">
+										<div class="supplement_name">
+											<div class="supplement_name_jp text--head3 text--black">ビタミンB群（ビール酵母）</div>
+										</div>
+										<div class="supplement_img_box">
+											<div class="supplement_masked_img supplement_masked_img--r04s00 supplement_masked_img--supplement8" style="background-image: url(<%= asset_path 'herb-test.jpg' %>)">
+										</div>
+
+										</div>
+										<div class="supplement_description_box">
+											<div class="supplement_description_inner">
+												<div class="supplement_description_text text--caption1 text--gray">このサプリメントは、ビタミンB1、ミネラル類、アミノ酸のほか、機能成分として注目されている多糖類 (β-D-グルカン) を含むビール酵母が含まれます。</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+					<h2 class="result_title01">－現在はお試し版です－</h2>
+					<div class="pre-register-box" id="cl_start">
+						<div class="ui-btn ui-input-btn ui-btn-b ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-right">
+							<%= link_to "事前登録はこちら", root_path, class: "link_button" %>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<footer>
+			© MINX All rights reserved.
+		</footer>
+	</div>
+</div>

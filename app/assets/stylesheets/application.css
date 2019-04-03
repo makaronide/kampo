@@ -120,7 +120,7 @@ body a {
   margin: 0 0 30px 0;
 }
 
-.ui-content {
+.ui-content .pre-register-box{
   border-width: 0;
   overflow: visible;
   overflow-x: hidden;
@@ -252,10 +252,215 @@ body a {
   display: block;
 }
 
+#result_box {
+  margin: 25px 20px 30px 20px;
+}
+
+.result_title01 {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 24px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "TelopMinPro-B";
+  margin-bottom: 24px;
+}
+
+.result_comm {
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0 auto 30px auto;
+  font-family: "TelopMinPro-B";
+  color: #815A0B;
+}
+
+.result_sub {
+  display: block;
+}
+
+.result_main {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #fff;
+  padding: 12px 20px;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 34px;
+  margin: 12px auto;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+.result_txt {
+  text-align: center;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 26px;
+  font-family: "FP-HiraMinProN-W3";
+  margin: 0 auto 30px auto;
+}
+
+.resutl_color2, .resutl_color3, .resutl_color5, .resutl_color6 {
+  color: #825A45;
+  border-color: #825A45;
+}
+
+#result_otherbox {
+  border-top: 1px solid #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+  padding-top: 18px;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.result_title02 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 18px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "TelopMinPro-B";
+  margin-bottom: 10px;
+}
+
+.result_txt .text_chu {
+  display: block;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+.surface--r12-s03, .order_stop_page_inner .options .option, .order_stop_page_inner .option-checked, .survey_wrapper .options .option {
+  border-radius: 12px;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,0.06);
+}
+
+#result_ohterlist {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.text--caption1 {
+  font-size: 12px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+.text--head3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.survey_result_ul {
+	display: inline-block;
+  padding: 20px 8px;
+  white-space: normal;
+  width: 350px;
+}
+
+.supplement_card {
+  background-color: #ffffff;
+  margin: 16px 6px;
+  padding: 20px 20px 20px 24px;
+  position: relative;
+}
+
+.supplement_card .supplement_name {
+  z-index: 1;
+  position: relative;
+}
+
+.supplement_card .supplement_name .supplement_name_jp {
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.supplement_card .supplement_img_box {
+  height: 136px;
+  margin: 16px 0;
+}
+
+.supplement_masked_img {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.supplement_card .supplement_description_box {
+  height: 100px;
+  display: table;
+}
+
+.supplement_card .supplement_description_box .supplement_description_inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text--center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pre-register-box {
+	width: 25%;
+	margin: 10px auto 0 auto;
+}
+
+.pre-register-btn {
+	font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+	font-family: "FP-HiraMinProN-W6";
+  font-size: 20px;
+  font-size: 2.0rem;
+  line-height: 20px;
+	background-color: #F3F1EA;
+  border-color: #DBDBDB;
+  color: #61410B;
+  text-shadow: 0 0 0 #f3f3f3;
+  border-radius: 0.2em
+}
+
+.pre-register-btn-link {
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: #fff;
+  background: rgba(255,255,255,0);
+  filter: Alpha(Opacity=0);
+  opacity: .1;
+  font-size: 1px;
+  text-indent: -9999px;
+  z-index: 2;
+}
 
 
 @media screen and (orientation: landscape) {
 	.ui-mobile .ui-page {
 	    min-height: 300px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.survey_result_ul {
+    list-style: none;
 	}
 }
