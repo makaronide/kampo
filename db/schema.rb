@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(version: 20190403070657) do
     t.index ["shoyaku_id"], name: "index_kampo_shoyaku_relations_on_shoyaku_id", using: :btree
   end
 
-  create_table "kampo_shoyakus", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "kampo_id"
-    t.integer  "shoyaku_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "kampos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.text     "description",  limit: 65535
@@ -41,21 +34,16 @@ ActiveRecord::Schema.define(version: 20190403070657) do
     t.integer  "true_number"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
-  end
-
-  create_table "question", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "symptom_id"
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.index ["condition_id"], name: "index_kampos_on_condition_id", using: :btree
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "symptom_id"
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "condition_id"
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "kampo_id"
+    t.index ["condition_id"], name: "index_questions_on_condition_id", using: :btree
     t.index ["kampo_id"], name: "index_questions_on_kampo_id", using: :btree
   end
 
@@ -79,5 +67,7 @@ ActiveRecord::Schema.define(version: 20190403070657) do
 
   add_foreign_key "kampo_shoyaku_relations", "kampos"
   add_foreign_key "kampo_shoyaku_relations", "shoyakus"
+  add_foreign_key "kampos", "conditions"
+  add_foreign_key "questions", "conditions"
   add_foreign_key "questions", "kampos"
 end

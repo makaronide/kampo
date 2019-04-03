@@ -3,12 +3,20 @@
 # Table name: kampos
 #
 #  id           :integer          not null, primary key
-#  name         :string(255)
 #  description  :text(65535)
-#  condition_id :integer
+#  name         :string(255)
 #  true_number  :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  condition_id :integer
+#
+# Indexes
+#
+#  index_kampos_on_condition_id  (condition_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (condition_id => conditions.id)
 #
 
 require 'test_helper'
