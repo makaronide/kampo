@@ -28,4 +28,4 @@
 .idea/*
 vendor/bundle
 
-
+.DS_Store
