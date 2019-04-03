@@ -4,7 +4,6 @@ class CreateKampos < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.references :condition, foreign_key: true
-      t.integer :true_number
 
       t.timestamps
     end
