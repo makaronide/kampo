@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190402095132) do
+ActiveRecord::Schema.define(version: 20190403070657) do
 
   create_table "conditions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -43,11 +43,20 @@ ActiveRecord::Schema.define(version: 20190402095132) do
     t.datetime "updated_at",                 null: false
   end
 
+  create_table "question", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "symptom_id"
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "symptom_id"
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "kampo_id"
+    t.index ["kampo_id"], name: "index_questions_on_kampo_id", using: :btree
   end
 
   create_table "shoyakus", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -70,4 +79,5 @@ ActiveRecord::Schema.define(version: 20190402095132) do
 
   add_foreign_key "kampo_shoyaku_relations", "kampos"
   add_foreign_key "kampo_shoyaku_relations", "shoyakus"
+  add_foreign_key "questions", "kampos"
 end
