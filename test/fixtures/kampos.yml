@@ -5,7 +5,6 @@
 #  id           :integer          not null, primary key
 #  description  :text(65535)
 #  name         :string(255)
-#  true_number  :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  condition_id :integer

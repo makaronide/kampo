@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20190403070657) do
     t.string   "name"
     t.text     "description",  limit: 65535
     t.integer  "condition_id"
-    t.integer  "true_number"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.index ["condition_id"], name: "index_kampos_on_condition_id", using: :btree
