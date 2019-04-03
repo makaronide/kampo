@@ -8,7 +8,16 @@ class QuestionsController < ApplicationController
     else
     	@question = Question.order('id asc').where(["id > ? and condition_id = ?", @question_id, @condition_id]).first
     	if @question == nil
-    		render("result/kampo")
+    		result_kampo_id = 0
+    		kanpo_true_number = 0
+    		session.each{|key, value|
+    			if kanpo_true_number < value.to_i
+    				result_kampo_id = key
+    			end
+				}
+				@kampo = Kampo.find(result_kampo_id)
+				@shoyakus = @kampo.shoyaku
+    		render("result/kampo/")
     		return
     	end
     end

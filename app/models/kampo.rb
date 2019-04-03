@@ -22,4 +22,7 @@ class Kampo < ApplicationRecord
   belongs_to :condition
   has_many :kampo_shoyaku_relations
   has_many :shoyaku, through: :kampo_shoyaku_relations
+
+  def get_kampo
+  end
 end
