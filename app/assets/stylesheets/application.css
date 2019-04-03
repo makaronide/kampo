@@ -43,6 +43,11 @@ body > div {
   line-height: 2.2rem;
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head + body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head + body .ui-btn.ui-btn-b:visited {
     background-color: #F3F1EA;
     border-color: #DBDBDB;
@@ -87,6 +92,7 @@ body > div {
 #councel_top {
   min-height: 540px;
   text-align: center;
+  height: 100%;
 }
 
 #councel_top h1 {
@@ -94,6 +100,11 @@ body > div {
   padding: 80px 0 12px 0;
   border-bottom: 1px solid #D1C7AD;
   width: 400px;
+}
+
+#survey_top {
+	padding: 36px 20px 0 20px;
+  margin-bottom: 36px;
 }
 
 #top_body {
@@ -178,6 +189,70 @@ body > div {
   font-size: 11px;
   font-size: 1.1rem;
 }
+
+.q_wrapper legend {
+  display: block;
+  width: 100%;
+  color: #815A0B;
+  font-family: "FP-HiraMinProN-W6";
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin: 0 auto 24px auto;
+  height: 72px;
+  text-align: center;
+}
+
+.q_wrapper .q_nmu {
+  border-right: 1px solid #815A0B;
+  display: inline-block;
+  padding-right: 12px;
+}
+
+.q_wrapper .q_text {
+  padding-left: 6px;
+}
+
+.row {
+  width: calc(100% + 0px * 2);
+  margin: 0 0px;
+}
+
+#obg_wrapper .options .row {
+  margin: 12px 0;
+}
+
+.options .option {
+  font-size: 16px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+#obg_wrapper .options .option {
+  cursor: pointer;
+  text-align: center;
+  background-color: #ffffff;
+  height: 48px;
+  width: 10000px;
+  display: table-cell;
+  vertical-align: bottom;
+  padding-bottom: 24px;
+  border: solid 1px #edeeef;
+}
+
+#obg_wrapper .options .option {
+  border-radius: 12px;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,0.06);
+}
+
+.row:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+
 
 @media screen and (orientation: landscape) {
 	.ui-mobile .ui-page {
