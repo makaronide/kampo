@@ -13,7 +13,7 @@
 
 						<% @conditions.each do |condition| %>
 						<div class="row">
-							<%= link_to "/survey/" + "#{condition.id}" + "/" + "#{@next_question_id}", class: 'js_survey_content_link' do %>
+							<%= link_to "/survey/" + "#{condition.id}" + "/" + "#{@question_id}", class: 'js_survey_content_link' do %>
 					  		<div class="option"><%= condition.name %></div>
 							<% end %>
 						</div>
