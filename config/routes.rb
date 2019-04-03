@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'result/kampo'
+  get 'result' => 'results#kampo'
 
   get 'survey/condition' => 'conditions#name'
 

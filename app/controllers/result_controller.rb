@@ -1,6 +1,8 @@
 class ResultController < ApplicationController
   def kampo
-    @kampo = Kampo.find_by(condition_id: params[:], true_number:)
+    @shoyaku_id = KampoShoyakuRelation.find_by(id: @result_kampo.id)
+    @shoyaku = Shoyaku.where(id: @shoyaku_id)
     
+
   end
 end
